@@ -68,7 +68,7 @@ body {
 .grid {
   grid-column: 2 / 4;
   grid-gap: 20px;
-  widows: 100%;
+  width: 100%;
   padding: 10px;
   margin-bottom: 4rem;
   display: grid;
