@@ -74,3 +74,62 @@ body {
   display: grid;
   grid-template-columns: 90px 300px 1fr;
 }
+
+.animals > h1 {
+  font-family: "Playfair Display SC", Georgia;
+  font-size: 6rem;
+  line-height: 1;
+  font-weight: 400;
+  margin-bottom: 1rem;
+  grid-column: 1 / 4;
+}
+
+.animals > ul {
+  height: 370px;
+  overflow-y: scroll;
+  grid-column: 2;
+}
+
+.animals > ul::-webkit-scrollbar {
+  width: 18px;
+}
+.animals > ul::-webkit-scrollbar-thumb {
+  background-color: #fb5;
+  border-left: 4px solid #faf6ed;
+  border-right: 4px solid #faf6ed;
+}
+.animals > ul::-webkit-scrollbar-track {
+  background-color: #faf6ed;
+}
+
+.animals-description {
+  grid-column: 3;
+}
+.animals-description section {
+  margin-bottom: 3rem;
+}
+
+.animals-description h2 {
+  font-family: "IBM Plex Mono", monospace;
+  font-size: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  margin-bottom: 1rem;
+  color: #e54;
+}
+
+.animals-description h2::before {
+  content: "";
+  display: inline-block;
+  width: 40px;
+  height: 10px;
+  margin-right: 10px;
+  background-color: #fb5;
+}
+
+.animals-description p {
+  font-family: Helvetica, Arial, sans-serif;
+  line-height: 1.2;
+  margin-bottom: 1rem;
+  text-align: justify;
+}
