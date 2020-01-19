@@ -34,3 +34,23 @@ const initAccordion = () => {
   }
 };
 initAccordion();
+
+// Scroll Menu
+const initScrollMenu = () => {
+  const internalLinksList = document.querySelectorAll('.js-menu a[href^="#"]');
+
+  function scrollToSection(event) {
+    event.preventDefault();
+    const section = document.querySelector(this.getAttribute("href"));
+    section.scrollIntoView({
+      behavior: "smooth",
+      block: "start"
+    });
+  }
+
+  internalLinksList.forEach(el =>
+    el.addEventListener("click", scrollToSection)
+  );
+};
+
+initScrollMenu();
