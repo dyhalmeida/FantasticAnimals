@@ -4,6 +4,7 @@ Fantastics Animals
 </h1>
 
 <p align="center">Site construído para praticar os fundamentos do curso de JavaScript ES6 da Origamid</p>
+
 ![](https://github.com/dyhalmeida/FantasticAnimals/blob/master/img/fantastics-animals.gif)
 
 ## Features
