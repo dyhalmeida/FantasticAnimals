@@ -1,0 +1,310 @@
+/* Reset CSS */
+body,
+h1,
+h2,
+p,
+ul,
+li,
+dd,
+dt,
+dl,
+a {
+  margin: 0px;
+  padding: 0px;
+}
+
+ul {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+}
+img {
+  display: block;
+  max-width: 100%;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #faf6ed;
+  color: #222222;
+  display: grid;
+  grid-template-columns: 1fr 120px minmax(300px, 800px) 1fr;
+}
+
+.menu {
+  grid-column: 3 / 5;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  background-color: #fb5;
+}
+
+.menu ul {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 10px;
+}
+
+.menu ul li a {
+  display: block;
+  padding: 10px;
+  margin-right: 10px;
+  color: #222222;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-family: "IBM Plex Mono", monospace;
+  font-weight: bold;
+  font-size: 0.875rem;
+  letter-spacing: 0.1em;
+}
+.menu ul li a:hover {
+  color: #faf6ed;
+}
+
+/* Grid of section */
+.grid {
+  grid-column: 2 / 4;
+  grid-gap: 20px;
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 4rem;
+  display: grid;
+  grid-template-columns: 90px 300px 1fr;
+}
+
+.animals > h1 {
+  font-family: "Playfair Display SC", Georgia;
+  font-size: 6rem;
+  line-height: 1;
+  font-weight: 400;
+  margin-bottom: 1rem;
+  grid-column: 1 / 4;
+}
+
+.animals > ul {
+  height: 370px;
+  overflow-y: scroll;
+  grid-column: 2;
+}
+
+.animals > ul > li {
+  cursor: pointer;
+}
+
+.animals > ul::-webkit-scrollbar {
+  width: 18px;
+}
+.animals > ul::-webkit-scrollbar-thumb {
+  background-color: #fb5;
+  border-left: 4px solid #faf6ed;
+  border-right: 4px solid #faf6ed;
+}
+.animals > ul::-webkit-scrollbar-track {
+  background-color: #faf6ed;
+}
+
+.animals-description {
+  grid-column: 3;
+}
+.animals-description section {
+  margin-bottom: 3rem;
+}
+
+.animals-description h2 {
+  font-family: "IBM Plex Mono", monospace;
+  font-size: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  margin-bottom: 1rem;
+  color: #e54;
+}
+
+.animals-description h2::before {
+  content: "";
+  display: inline-block;
+  width: 40px;
+  height: 10px;
+  margin-right: 10px;
+  background-color: #fb5;
+}
+
+.animals-description p {
+  font-family: Helvetica, Arial, sans-serif;
+  line-height: 1.2;
+  margin-bottom: 1rem;
+  text-align: justify;
+}
+
+.faq > h1 {
+  font-family: "Playfair Display SC", Georgia;
+  font-size: 6rem;
+  line-height: 1;
+  font-weight: 400;
+  margin-bottom: 1rem;
+  grid-column: 1 / 4;
+}
+
+.faq > dl {
+  grid-column: 2 / 4;
+}
+
+.faq > dl > dt {
+  font-family: "IBM Plex Mono", monospace;
+  font-weight: bold;
+  margin-top: 2rem;
+  margin-bottom: 0.5rem;
+  color: #e54;
+}
+
+.faq > dl > dt::before {
+  content: "";
+  display: inline-block;
+  width: 20px;
+  height: 10px;
+  margin-right: 10px;
+  background-color: #fb5;
+}
+
+.faq > dl dd {
+  font-family: Helvetica, Arial, sans-serif;
+  margin-bottom: 0.5rem;
+  margin-left: 30px;
+}
+
+.contact h1 {
+  font-family: "Playfair Display SC", Georgia;
+  font-size: 6rem;
+  line-height: 1;
+  font-weight: 400;
+  margin-bottom: 1rem;
+  grid-column: 1 / 4;
+}
+
+.map {
+  grid-column: 2;
+}
+
+.data {
+  grid-column: 3;
+}
+
+.data li {
+  margin-bottom: 1rem;
+  font-family: Helvetica, Arial, sans-serif;
+}
+
+.data li::before {
+  content: "";
+  display: inline-block;
+  width: 20px;
+  height: 10px;
+  margin-right: 10px;
+  background-color: #fb5;
+}
+
+.copyright {
+  grid-column: 3 / 5;
+  margin-bottom: 2rem;
+  background-color: #fb5;
+}
+
+.copyright p {
+  padding: 20px;
+  font-family: "IBM Plex Mono", monospace;
+  font-weight: bold;
+}
+
+@media (max-width: 700px) {
+  body {
+    grid-template-columns: 1fr;
+  }
+
+  .menu,
+  .grid,
+  .copyright {
+    grid-column: 1;
+  }
+
+  .grid {
+    grid-template-columns: 100px 1fr;
+    grid-gap: 10px;
+  }
+
+  .animals > ul {
+    grid-column: 1;
+  }
+
+  .faq > dl,
+  .data,
+  .map {
+    grid-column: 1 / 3;
+  }
+
+  .grid h1 {
+    font-size: 3rem;
+  }
+
+  .menu {
+    margin-top: 0px;
+  }
+
+  .copyright {
+    margin-bottom: 0px;
+  }
+}
+
+/* Manipulação via javascript para efeito de tabMenu */
+.js .js-tabcontent section {
+  display: none;
+}
+
+.js-tabcontent section.active {
+  display: block !important;
+  animation: show 0.5s forwards;
+}
+
+@keyframes show {
+  from {
+    opacity: 0;
+    transform: translate3d(-30px, 0, 0);
+  }
+
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+/* Manipulação via javascript para efeito de accordion */
+.js .js-accordion dd {
+  display: none;
+}
+
+.js-accordion dt::after {
+  content: "⬎";
+  margin-left: 10px;
+}
+
+.js-accordion dt.active::after {
+  content: "⬏";
+}
+
+.js-accordion dd.active {
+  display: block;
+  animation: slideDown 0.5s forwards;
+}
+
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    max-height: 0;
+  }
+
+  to {
+    opacity: 1;
+    max-height: 200px;
+  }
+}
